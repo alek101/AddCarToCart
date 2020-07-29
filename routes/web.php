@@ -22,4 +22,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', 'CarsController@index');
+Route::get('/add', 'CarsController@add')->middleware('auth');
+Route::get('/{filter}', 'CarsController@indexWithFilter');
 Route::get('/info/{id}', 'CarsController@show');

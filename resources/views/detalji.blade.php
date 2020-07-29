@@ -5,14 +5,16 @@
             // var_dump($car)
         @endphp
 
-        <h1> Detalji Strana </h1>
+        <h1> Detalje Strana </h1>
         
             <div>
-                {{ $car->naziv }}
-                {{ $car->nazivBrenda }}
+                <p>Naziv: {{ $car->naziv }}</p>
+                <p>Brend: {{ $car->nazivBrenda }} </p>
+                <p>Cena: {{ $car->cena }} </p>
+                <p>Godiste: {{ $car->godiste }} </p>
             </div>
        
-        
+        <a href="/add">Dodaj u Korpu</a>
 
     
 @endsection
