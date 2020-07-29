@@ -12,7 +12,7 @@ class CarsController extends Controller
     {
         $listCars=Car::select()
         ->join('brands','cars.brand','=','brands.id')
-        ->paginate(10);
+        ->paginate(1);
         $brands=Helper::allBrands();
         return view('prvaStranica',['listCars'=>$listCars,'brands'=>$brands]);
     }
@@ -23,7 +23,7 @@ class CarsController extends Controller
         $listCars=Car::select()
         ->join('brands','cars.brand','=','brands.id')
         ->where('nazivBrenda',$filter)
-        ->paginate(10);
+        ->paginate(1);
         $brands=Helper::allBrands();
         return view('prvaStranica',['listCars'=>$listCars,'brands'=>$brands]);
     }
