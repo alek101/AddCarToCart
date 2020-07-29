@@ -5,7 +5,7 @@
             // var_dump($listCars)
         @endphp
 
-        <h1> Prva Strana </h1>
+        <h3> Automobili </h3>
         <div id="vueSelector">
             <select name="cars" id="cars" v-model='selector' @change="swichPage">
                 <option value="all">All of Them</option>
@@ -16,8 +16,9 @@
         </div>
         
         @foreach ($listCars as $car)
-            <div>
+            <div class="border">
                 <p>Naziv: {{ $car->naziv }}</p>
+                <p><img src={{ $car->slika }} alt="jok"></p>
                 <p>Brend: {{ $car->nazivBrenda }} </p>
                 <p>Cena: {{ $car->cena }} </p>
                 <p> <a href="/info/{{ $car->id }}">Detaljnije </a> </p>
